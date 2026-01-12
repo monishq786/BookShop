@@ -2,7 +2,7 @@
 
 specVersion: "4.0"
 metadata:
-  name: bookshop
+  name: bookshopelement
 type: application
 server:
   customMiddleware:
@@ -38,6 +38,6 @@ builder:
     - name: ui5-task-zipper
       afterTask: generateVersionInfo
       configuration:
-        archiveName: bookshop
+        archiveName: bookshopelement
         additionalFiles:
           - xs-app.json
