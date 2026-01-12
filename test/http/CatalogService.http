@@ -9,6 +9,45 @@ GET {{server}}/odata/v4/catalog/Books
 Authorization: Basic {{username}}:{{password}}
 
 
+### Books
+# @name Books_POST
+POST {{server}}/odata/v4/catalog/Books
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 17687516,
+  "title": "title-17687516",
+  "author": {
+    "ID": 7071095
+  },
+  "stock": 85
+}
+
+
+### Books
+# @name Books_PATCH
+PATCH {{server}}/odata/v4/catalog/Books/17687516
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 101,
+  "title": "English",
+  "author": {
+    "ID": 1
+  },
+  "stock": 812
+}
+
+
+### Books
+# @name Books_DELETE
+DELETE {{server}}/odata/v4/catalog/Books/17687516
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
 ### Authors
 # @name Authors_GET
 GET {{server}}/odata/v4/catalog/Authors
@@ -22,25 +61,25 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": 4809363,
-  "name": "name-4809363"
+  "ID": 7071095,
+  "name": "name-7071095"
 }
 
 
 ### Authors
 # @name Authors_PATCH
-PATCH {{server}}/odata/v4/catalog/Authors/4809363
+PATCH {{server}}/odata/v4/catalog/Authors/7071095
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": 4809363,
-  "name": "name-4809363"
+  "ID": 7071095,
+  "name": "name-7071095"
 }
 
 
 ### Authors
 # @name Authors_DELETE
-DELETE {{server}}/odata/v4/catalog/Authors/4809363
+DELETE {{server}}/odata/v4/catalog/Authors/7071095
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

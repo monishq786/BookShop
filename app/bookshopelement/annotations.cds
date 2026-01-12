@@ -17,12 +17,7 @@ annotate service.Books with @(
                 $Type : 'UI.DataField',
                 Label : 'author_ID',
                 Value : author_ID,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'stock',
-                Value : stock,
-            },
+            }
         ],
     },
     UI.Facets : [
@@ -42,22 +37,17 @@ annotate service.Books with @(
         {
             $Type : 'UI.DataField',
             Label : 'title',
-            Value : title,
+            Value : name,
         },
         {
             $Type : 'UI.DataField',
             Label : 'author_ID',
             Value : author_ID,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'stock',
-            Value : stock,
-        },
+        }
     ],
 );
 
-annotate service.Books with {
+annotate service.Authors with {
     author @Common.ValueList : {
         $Type : 'Common.ValueListType',
         CollectionPath : 'Authors',
