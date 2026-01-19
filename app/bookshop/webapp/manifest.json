@@ -107,7 +107,7 @@
       "routes": [
         {
           "name": "RouteBookShop",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetBookShop"
           ]
