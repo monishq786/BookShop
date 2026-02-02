@@ -27,10 +27,10 @@
     },
     "crossNavigation": {
       "inbounds": {
-        "Object-display": {
-          "semanticObject": "Object",
+        "object-display": {
+          "semanticObject": "object",
           "action": "display",
-          "title": "{{Object-display.flpTitle}}",
+          "title": "{{object-display.flpTitle}}",
           "signature": {
             "parameters": {},
             "additionalParameters": "allowed"

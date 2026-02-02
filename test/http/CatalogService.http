@@ -3,83 +3,99 @@
 @password=
 
 
-### Books
-# @name Books_GET
-GET {{server}}/odata/v4/catalog/Books
+### Categories
+# @name Categories_GET
+GET {{server}}/odata/v4/catalog/Categories
 Authorization: Basic {{username}}:{{password}}
 
 
-### Books
-# @name Books_POST
-POST {{server}}/odata/v4/catalog/Books
+### Categories
+# @name Categories_POST
+POST {{server}}/odata/v4/catalog/Categories
+
+{
+  "id": "7671319e-742b-41d0-a144-54aafa7b9b8a",
+  "name": "name-7671319",
+  "description": "description-7671319"
+}
+
+
+### Categories
+# @name Categories_PATCH
+PATCH {{server}}/odata/v4/catalog/Categories/7671319e-742b-41d0-a144-54aafa7b9b8a
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": 17687516,
-  "title": "title-17687516",
-  "author": {
-    "ID": 7071095
+  "id": "7671319e-742b-41d0-a144-54aafa7b9b8a",
+  "name": "name-7671319",
+  "description": "description-7671319"
+}
+
+
+### Categories
+# @name Categories_DELETE
+DELETE {{server}}/odata/v4/catalog/Categories/7671319e-742b-41d0-a144-54aafa7b9b8a
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Cources
+# @name Cources_GET
+GET {{server}}/odata/v4/catalog/Cources
+
+### Cources
+# @name Cources_POST
+POST {{server}}/odata/v4/catalog/Cources
+Content-Type: application/json
+
+{
+  "category": {
+    "id": "7671319e-742b-41d0-a144-54aafa7b9b80"
   },
-  "stock": 85
-}
-
-
-### Books
-# @name Books_PATCH
-PATCH {{server}}/odata/v4/catalog/Books/17687516
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-{
-  "ID": 101,
-  "title": "English",
-  "author": {
-    "ID": 1
+  "course_name": "New",
+  "price": "e-11390009",
+  "language": {
+    "code": "nguages-700569"
   },
-  "stock": 812
+  "createdAt": "2020-12-20T00:00:00.000Z",
+  "createdBy": "createdBy.6s4l5@example.net",
+  "modifiedAt": "2000-08-03T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.6s4l5@example.net"
 }
 
 
-### Books
-# @name Books_DELETE
-DELETE {{server}}/odata/v4/catalog/Books/17687516
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-
-### Authors
-# @name Authors_GET
-GET {{server}}/odata/v4/catalog/Authors
-Authorization: Basic {{username}}:{{password}}
-
-
-### Authors
-# @name Authors_POST
-POST {{server}}/odata/v4/catalog/Authors
+### Cources
+# @name Cources_PATCH
+PATCH {{server}}/odata/v4/catalog/Cources/11390009-ffa5-4142-879d-b6ec353d4ecc
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": 7071095,
-  "name": "name-7071095"
+  "course_id": "11390009-ffa5-4142-879d-b6ec353d4ecc",
+  "category": {
+    "id": "7671319e-742b-41d0-a144-54aafa7b9b8a"
+  },
+  "course_name": "course_name-11390009",
+  "price": "e-11390009",
+  "language": {
+    "code": "nguages-700569"
+  },
+  "createdAt": "2020-12-20T00:00:00.000Z",
+  "createdBy": "createdBy.6s4l5@example.net",
+  "modifiedAt": "2000-08-03T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.6s4l5@example.net"
 }
 
 
-### Authors
-# @name Authors_PATCH
-PATCH {{server}}/odata/v4/catalog/Authors/7071095
+### Cources
+# @name Cources_DELETE
+DELETE {{server}}/odata/v4/catalog/Cources/11390009-ffa5-4142-879d-b6ec353d4ecc
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
-{
-  "ID": 7071095,
-  "name": "name-7071095"
-}
 
-
-### Authors
-# @name Authors_DELETE
-DELETE {{server}}/odata/v4/catalog/Authors/7071095
-Content-Type: application/json
+### Languages
+# @name Languages_GET
+GET {{server}}/odata/v4/catalog/Languages
 Authorization: Basic {{username}}:{{password}}

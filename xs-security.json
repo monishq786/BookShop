@@ -2,6 +2,30 @@
   "xsappname": "BookShop",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
-  "scopes": [],
-  "role-templates": []
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Can view books"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Can manage the bookstore"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "ViewerRole",
+      "description": "Read-only access",
+      "scope-references": [
+        "$XSAPPNAME.Viewer"
+      ]
+    },
+    {
+      "name": "AdminRole",
+      "description": "Full administrative access",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ]
 }
