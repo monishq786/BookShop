@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "/",
+  "welcomeFile": "/index.html",
   "authenticationMethod": "route",
   "routes": [
     {
@@ -15,10 +15,17 @@
       "destination": "ui5"
     },
     {
-      "source": "^(?!/resources/|/test-resources/)(.*)$",
+      "source": "^(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",
       "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/?odata/(.*)$",
+      "target": "/odata/$1",
+      "destination": "srv-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": true
     }
   ]
 }

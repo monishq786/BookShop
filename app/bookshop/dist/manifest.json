@@ -30,19 +30,29 @@
 				}
 			}
 		},
-		"crossNavigation": {
-			"inbounds": {
-				"object-display": {
-					"semanticObject": "object",
-					"action": "display",
-					"title": "{{object-display.flpTitle}}",
-					"signature": {
-						"parameters": {},
-						"additionalParameters": "allowed"
+		"sap.app": {
+			"id": "bookshop",
+			"type": "application",
+			"title": "BookShop",
+			"description": "A simple CAP project",
+			"crossNavigation": {
+				"inbound": {
+					"intent-display": {
+						"semanticObject": "BookShop",
+						"action": "display",
+						"title": "BookShop",
+						"signature": {
+							"parameters": {},
+							"additionalParameters": "allowed"
+						}
 					}
 				}
 			}
 		}
+	},
+	"sap.cloud": {
+		"public": true,
+		"service": "BookShop"
 	},
 	"sap.ui": {
 		"technology": "UI5",

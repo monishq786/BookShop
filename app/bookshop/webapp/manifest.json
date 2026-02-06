@@ -25,19 +25,29 @@
         }
       }
     },
-    "crossNavigation": {
-      "inbounds": {
-        "object-display": {
-          "semanticObject": "object",
-          "action": "display",
-          "title": "{{object-display.flpTitle}}",
-          "signature": {
-            "parameters": {},
-            "additionalParameters": "allowed"
+    "sap.app": {
+      "id": "bookshop",
+      "type": "application",
+      "title": "BookShop",
+      "description": "A simple CAP project",
+      "crossNavigation": {
+        "inbound": {
+          "intent-display": {
+            "semanticObject": "BookShop",
+            "action": "display",
+            "title": "BookShop",
+            "signature": {
+              "parameters": {},
+              "additionalParameters": "allowed"
+            }
           }
         }
       }
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "BookShop"
   },
   "sap.ui": {
     "technology": "UI5",
@@ -56,7 +66,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.143.2",
       "libs": {
@@ -107,9 +117,16 @@
       "routes": [
         {
           "name": "RouteBookShop",
-          "pattern": "",
+          "pattern": "RouteBookShop",
           "target": [
             "TargetBookShop"
+          ]
+        },
+        {
+          "name": "RouteCource",
+          "pattern": "",
+          "target": [
+            "TargetCource"
           ]
         }
       ],
@@ -117,6 +134,10 @@
         "TargetBookShop": {
           "id": "BookShop",
           "name": "BookShop"
+        },
+        "TargetCource": {
+          "id": "CourceList",
+          "name": "CourceList"
         }
       }
     },

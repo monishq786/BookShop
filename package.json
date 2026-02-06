@@ -5,7 +5,7 @@
   "dependencies": {
     "@cap-js/hana": "^2.5.1",
     "@sap/cds": "^9.6.4",
-    "@sap/xssec": "^4.12.2",
+    "@sap/xssec": "^4",
     "express": "^4"
   },
   "devDependencies": {
@@ -28,7 +28,10 @@
       "destinations": true,
       "html5-repo": true,
       "auth": "xsuaa",
-      "db": "hana"
+      "db": "hana",
+      "[production]": {
+        "auth": "xsuaa"
+      }
     }
   },
   "workspaces": [

@@ -1,31 +1,21 @@
 {
-  "xsappname": "BookShop",
+  "xsappname": "bookshop",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [
     {
-      "name": "$XSAPPNAME.Viewer",
-      "description": "Can view books"
-    },
-    {
-      "name": "$XSAPPNAME.Admin",
-      "description": "Can manage the bookstore"
+      "name": "uaa.user",
+      "description": "UAA"
     }
   ],
   "role-templates": [
     {
-      "name": "ViewerRole",
-      "description": "Read-only access",
+      "name": "Token_Exchange",
+      "description": "UAA",
       "scope-references": [
-        "$XSAPPNAME.Viewer"
-      ]
-    },
-    {
-      "name": "AdminRole",
-      "description": "Full administrative access",
-      "scope-references": [
-        "$XSAPPNAME.Admin"
+        "uaa.user"
       ]
     }
-  ]
+  ],
+  "attributes": []
 }

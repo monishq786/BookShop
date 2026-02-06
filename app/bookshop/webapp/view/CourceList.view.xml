@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="bookshop.controller.CourceList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="OData V4 Product List">
+        <List
+            id="idProductList"
+            items="{
+                path: '/Cources',
+                parameters: {
+                    $select: 'course_name,price'
+                }
+            }">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title text="Products" />
+                    <ToolbarSpacer />
+                    <Button icon="sap-icon://refresh" press="onRefresh" />
+                </OverflowToolbar>
+            </headerToolbar>
+            <StandardListItem
+                title="{course_name}"
+                info="{price}"
+                infoState="Success" />
+        </List>
+    </Page>
+</mvc:View>
