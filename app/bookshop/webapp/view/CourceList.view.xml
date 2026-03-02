@@ -14,8 +14,6 @@
             <headerToolbar>
                 <OverflowToolbar>
                     <Title text="Products" />
-                    <ToolbarSpacer />
-                    <Button icon="sap-icon://refresh" press="onRefresh" />
                 </OverflowToolbar>
             </headerToolbar>
             <StandardListItem
@@ -23,5 +21,10 @@
                 info="{price}"
                 infoState="Success" />
         </List>
+
+        <!-- <List items="{EmpModel>/Employee}">
+          <StandardListItem title="{EmpModel>Name}" description="{EmpModel>Role}">
+          </StandardListItem>
+        </List> -->
     </Page>
 </mvc:View>
